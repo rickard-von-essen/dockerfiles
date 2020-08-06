@@ -3,7 +3,7 @@ FROM debian:10 AS BUILD
 ARG VERSION=0.6.0.20070113.0
 ARG BUILD_DEPS="wget patch gcc make g++ bison"
 
-COPY pasmo.patch /tmp/pasmo.patch
+COPY pasmo/pasmo.patch /tmp/pasmo.patch
 
 RUN apt-get update && \
   apt-get install -y $BUILD_DEPS && \
